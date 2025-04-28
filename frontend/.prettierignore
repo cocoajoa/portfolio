@@ -1,0 +1,13 @@
+# Ignore artifacts:
+node_modules
+.next
+dist
+build
+coverage
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+public
+.env
+*.log
+eslint.config.mjs
