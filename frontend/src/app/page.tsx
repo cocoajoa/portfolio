@@ -1,9 +1,9 @@
 import Sidebar from '@/components/Sidebar/Sidebar';
 export default function Home() {
   const sections = [
-    { id: 'section1', title: 'Introduction' },
+    { id: 'section1', title: 'About Me' },
     { id: 'section2', title: 'Projects' },
-    { id: 'section3', title: 'Conclusion' },
+    { id: 'section3', title: 'Contact' },
   ];
 
   return (

@@ -14,15 +14,16 @@ export default function Sidebar({ sections }: { sections: Section[] }) {
   };
 
   return (
-    <nav className={style.sidebar}>
-      <ul>
+    <nav className={style.sidebar_container}>
+      <ul className={style.sidebar_list}>
         {sections.map((section) => (
           <li
             key={section.id}
-            style={{ cursor: 'pointer', marginBottom: '10px' }}
+            className={style.sidebar_item}
             onClick={() => handleClick(section.id)}
           >
-            {section.title}
+            <span className={style.text_base}> {section.title}</span>
+            <span className={style.text_hover}>{section.title}</span>
           </li>
         ))}
       </ul>
