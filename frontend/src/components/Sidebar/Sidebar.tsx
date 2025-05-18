@@ -14,8 +14,8 @@ export default function Sidebar({ sections }: { sections: Section[] }) {
   };
 
   return (
-    <nav className={style.sidebar_container}>
-      <ul className={style.sidebar_list}>
+    <nav className={style.sidebar_wrapper}>
+      <ul className={style.sidebar_panel}>
         {sections.map((section) => (
           <li
             key={section.id}
