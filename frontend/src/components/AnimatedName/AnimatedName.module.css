@@ -1,0 +1,29 @@
+.name_drawing_xl {
+  vertical-align: middle;
+  scale: 1.8;
+  margin: 0 1.5rem;
+  padding-bottom: 0.3rem;
+  width: 5rem;
+
+  stroke-dasharray: 316;
+  stroke-dashoffset: 316;
+  stroke: var(--color-name-stroke);
+  stroke-width: 1;
+  fill-opacity: 0;
+  fill: var(--color-name-fill);
+  animation:
+    draw-path 8s linear forwards,
+    fill-path 3s ease forwards;
+}
+@keyframes draw-path {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-path {
+  to {
+    stroke-opacity: 0;
+    fill-opacity: 1;
+  }
+}
