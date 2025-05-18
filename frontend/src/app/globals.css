@@ -1,11 +1,19 @@
 :root {
   --color-background: #f2f7fd; /*살짝 푸른계열로 */
   --color-foreground: #171717;
-  --color-sidebar-bg: #fafafa;
+  --color-bg-inside: #fafafa;
+  --color-name-stroke: #171717;
+  --color-name-fill: #141;
   --color-shadow: #171717;
 
   --shadow: 0 0.025rem 0.05rem var(--color-shadow);
-  --font-md: 1rem;
+  --font-s-md: 1rem;
+  --font-s-lg: 2rem;
+  --font-s-xlg: 3rem;
+
+  --font-w-regular: 400;
+  --font-w-bold: 700;
+  --font-w-extrabold: 800;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,8 +25,8 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  font-size: clamp(14px, 2.5vw, 18px);
+  word-break: keep-all;
 }
 
 body {
@@ -45,3 +53,10 @@ a {
     color-scheme: dark;
   }
 }
+/* 
+*,
+*::before,
+*::after {
+  outline: 2px solid lime;
+  background: hsla(70, 35%, 60%, 0.1);
+} */
