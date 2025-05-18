@@ -1,0 +1,56 @@
+.quote_wrap_l {
+  font-size: var(--font-s-lg);
+}
+
+.quote_left,
+.quote_right {
+  display: inline-block;
+  animation: float-quote 1.5s ease-in-out infinite;
+}
+
+.quote_letter {
+  display: inline-block;
+  animation: wave-text 1s ease-in-out forwards;
+  cursor: pointer;
+  padding-left: 0.1rem;
+}
+
+.quote_replay {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: wave-text-click;
+}
+
+@keyframes float-quote {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.3rem);
+  }
+}
+
+@keyframes wave-text {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(var(--wave-intensity, -0.6em));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave-text-click {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(var(--wave-intensity, -0.6em));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
