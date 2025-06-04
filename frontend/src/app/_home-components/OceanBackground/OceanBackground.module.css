@@ -1,0 +1,68 @@
+.ocean_wrapper {
+  position: relative;
+}
+
+.ocean {
+  position: relative;
+  background-image: linear-gradient(0deg, #022244, #58c8da);
+  padding-top: 3rem;
+  overflow-x: hidden;
+}
+
+.ocean::after,
+.ocean::before {
+  position: absolute;
+  top: -80px;
+  left: -10%;
+  opacity: 0.2;
+  animation: waves 10s ease infinite;
+  border-radius: 100%;
+  background-color: white;
+  width: 120%;
+  height: 120px;
+  content: '';
+}
+
+.ocean::before {
+  top: -60px;
+  left: -5%;
+  opacity: 0.1;
+  animation-delay: 5s;
+}
+
+@keyframes waves {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.boat {
+  position: absolute;
+  top: 0%;
+  left: -20%; /* 시작 위치를 왼쪽 밖에서 */
+  transform: translateY(-100%); /* 위에서 딱 떠 있게 */
+  z-index: 10;
+  animation: boating infinite cubic-bezier(0.39, 0.575, 0.565, 1) 10s;
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 92'%3E%3Cstyle%3Epath {fill:%2301225A;}%3C/style%3E%3Cpath d='M67.6 59.8h15.7l9.2-22.1-9.2-21.1H33.1v23L57.3 46v31.7H0L1 46l25.2-6.9V9.2l64.4-.5 26.2 51.6h13.4L204.7 0H264l18.4 22.1h16.1v14.7L500 14l-78.7 78H83.7z'/%3E%3C/svg%3E")
+    no-repeat;
+  width: 18.4%;
+}
+
+.boat:before {
+  display: block;
+  padding-top: 18.4%;
+  content: '';
+}
+
+@keyframes boating {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 80%;
+  }
+}

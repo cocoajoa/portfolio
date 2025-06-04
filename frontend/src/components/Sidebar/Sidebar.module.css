@@ -4,16 +4,22 @@
 }
 
 .sidebar_panel {
+  display: flex;
   position: fixed;
-  top: 8rem;
+  top: 4rem;
+  flex-direction: column;
+  justify-content: center;
   opacity: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: all 0.5s ease;
   margin-left: 3rem;
-  box-shadow: var(--shadow);
-  border-radius: 12px;
-  background-color: var(--color-bg-inside);
-  padding: 1rem 1.5rem;
-  width: 8rem;
+  box-shadow: 0 0 3vw 1vw var(--color-sidebar);
+  border-radius: 100%;
+  background: var(--color-sidebar);
+  padding: 2rem 2.2rem;
+  width: 10rem;
+  height: 10rem;
   font-weight: var(--font-w-bold);
   list-style: none;
 
@@ -23,7 +29,6 @@
     pointer-events: none;
   }
 }
-
 .sidebar_item {
   --sidebar-flip: cubic-bezier(0.8, -0.4, 0.5, 1);
   display: flex;

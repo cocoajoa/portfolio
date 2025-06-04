@@ -1,0 +1,24 @@
+.sidebar_container {
+  position: relative;
+}
+
+.header_container {
+  margin: 0vh auto;
+  margin-bottom: 30vh;
+  width: clamp(24rem, 100%, 1024px);
+}
+
+.section {
+  padding: 3rem 3.25rem;
+}
+
+.intro_description {
+  margin-top: 5rem;
+  font-size: var(--font-s-md);
+
+  li {
+    margin-top: 1.5rem;
+    line-height: 1.75;
+    list-style: none;
+  }
+}

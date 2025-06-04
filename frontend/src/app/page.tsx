@@ -1,29 +1,19 @@
-import Sidebar from '@/components/Sidebar/Sidebar';
+import style from './page.module.css';
+import OceanBackground from '@/app/_home-components/OceanBackground/OceanBackground';
+import IntroSection from './_home-components/IntroSection/IntroSection';
+import ProjectSection from './_home-components/ProjectSection/ProjectSection';
 export default function Home() {
-  const sections = [
-    { id: 'section1', title: 'About Me' },
-    { id: 'section2', title: 'Projects' },
-    { id: 'section3', title: 'Contact' },
-  ];
-
   return (
-    <div style={{ display: 'flex' }}>
-      <Sidebar sections={sections} />
-      다크모드 on off 스위치
-      <main style={{ padding: '20px' }}>
-        <section id="section1" style={{ height: '100vh', borderBottom: '1px solid #ccc' }}>
-          <h2>안녕하세요, 장성일입니다.</h2>
-        </section>
+    <div className={style.body}>
+      <IntroSection />
+      <OceanBackground>
+        <ProjectSection />
 
-        <section id="section2" style={{ height: '100vh', borderBottom: '1px solid #ccc' }}>
-          <h2>프로젝트3개</h2>
-          프로젝트 개요 기술스택 참여인원, 기간ㅇ
+        <section id="section3" className={style.section}>
+          <h2>Contact</h2>
+          <p>이메일, 링크드인, GitHub</p>
         </section>
-
-        <section id="section3" style={{ height: '100vh', borderBottom: '1px solid #ccc' }}>
-          컨택정도?
-        </section>
-      </main>
+      </OceanBackground>
     </div>
   );
 }

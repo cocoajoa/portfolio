@@ -1,4 +1,4 @@
-.quote_wrap_l {
+.quote_wrap {
   font-size: var(--font-s-lg);
 }
 
@@ -13,12 +13,18 @@
   animation: wave-text 1s ease-in-out forwards;
   cursor: pointer;
   padding-left: 0.1rem;
+  font-weight: var(--font-w-bold);
 }
 
 .quote_replay {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-name: wave-text-click;
+}
+
+.narrow_space {
+  display: inline-block;
+  width: 0.2em;
 }
 
 @keyframes float-quote {

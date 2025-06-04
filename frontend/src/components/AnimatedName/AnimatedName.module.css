@@ -1,4 +1,6 @@
-.name_drawing_xl {
+.name_drawing {
+  --color-name-stroke: #171717;
+  --color-name-fill: #141;
   vertical-align: middle;
   scale: 1.8;
   margin: 0 1.5rem;
