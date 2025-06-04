@@ -5,7 +5,7 @@ import './globals.css';
 const nanumGothic = Nanum_Gothic({
   subsets: ['latin'],
   weight: ['400', '700'],
-  display: 'swap',
+  display: 'optional',
 });
 
 export const metadata: Metadata = {
