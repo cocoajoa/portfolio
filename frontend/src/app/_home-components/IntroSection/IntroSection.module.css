@@ -3,8 +3,11 @@
 }
 
 .header_container {
-  margin: 0vh auto;
-  margin-bottom: 30vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 10rem;
   width: clamp(24rem, 100%, 1024px);
 }
 
