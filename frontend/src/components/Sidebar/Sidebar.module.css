@@ -1,6 +1,7 @@
 .sidebar_wrapper {
   position: absolute;
   left: 100%;
+  z-index: 30;
 }
 
 .sidebar_panel {

@@ -4,9 +4,9 @@ import AnimatedName from '@/components/AnimatedName/AnimatedName';
 import AnimatedQuote from '@/components/AnimatedQuote/AnimatedQuote';
 
 const sections = [
-  { id: 'IntroSection', title: 'About Me' },
-  { id: 'ProjectSection', title: 'Projects' },
-  { id: 'section3', title: 'Contact' },
+  { id: 'IntroSection', title: '자기소개' },
+  { id: 'ProjectSection', title: '프로젝트' },
+  { id: 'ContactSection', title: '연락처' },
 ];
 
 export default function IntroSection() {

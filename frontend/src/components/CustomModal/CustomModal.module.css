@@ -1,0 +1,88 @@
+.modal_overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  transition: opacity 1s ease;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.modal_overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal_content {
+  transform: translateY(30px) scale(0.98);
+  opacity: 0;
+  margin: 0 3rem;
+  box-shadow: 0 10px 40px var(--color-shadow);
+  border-radius: 1rem;
+  background: var(--color-background);
+  padding: 2rem;
+  width: 800px;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.modal_content.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  animation: fadeInDelayed 2s linear forwards;
+}
+
+@keyframes fadeInDelayed {
+  0% {
+    transform: translateY(30px) scale(0.98);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(30px) scale(0.98);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* 버블 관련 */
+.bubble {
+  position: absolute;
+  bottom: var(--bottom);
+  left: var(--x);
+  z-index: 5;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.9),
+    rgba(173, 216, 230, 0.6) 60%,
+    rgba(173, 216, 230, 0.2) 100%
+  );
+
+  width: var(--size);
+  height: var(--size);
+  pointer-events: none;
+}
+
+.bubble.animate {
+  animation: bubbleRise var(--duration) ease-out var(--delay) forwards;
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-180vh) scale(0.8);
+    opacity: 1;
+  }
+}

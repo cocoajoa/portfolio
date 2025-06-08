@@ -3,6 +3,8 @@
   --color-foreground: #171717;
   --color-sidebar: #f3e177;
   --color-shadow: #171717;
+  --color-border-glass: rgba(255, 255, 255, 0.2);
+  --color-bg-glass: rgba(255, 255, 255, 0.05);
 
   --font-s-md: 1rem;
   --font-s-lg: 2rem;
@@ -30,8 +32,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   background: linear-gradient(#f0f7fa, #e2f2fa);
+  overflow-x: hidden;
 }
 
 * {
@@ -56,9 +58,9 @@ a {
   }
 }
 
-*,
+/* *,
 *::before,
 *::after {
   outline: 2px solid lime;
   background: hsla(70, 35%, 60%, 0.1);
-}
+} */

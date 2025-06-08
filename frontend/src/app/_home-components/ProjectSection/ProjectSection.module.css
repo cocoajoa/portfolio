@@ -1,6 +1,8 @@
 .section {
-  margin: 0vh auto;
-  margin-bottom: 30vh;
+  position: relative;
+  z-index: 4;
+  margin: 10vh auto;
   padding: 3rem 3.25rem;
   width: clamp(24rem, 100%, 1024px);
+  color: var(--color-background);
 }

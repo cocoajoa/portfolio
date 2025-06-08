@@ -11,6 +11,7 @@ const nanumGothic = Nanum_Gothic({
 export const metadata: Metadata = {
   title: 'SungIl_Portfolio',
   description: 'WantedJobApply',
+  icons: { icon: '/favicon.svg' },
 };
 
 export default function RootLayout({

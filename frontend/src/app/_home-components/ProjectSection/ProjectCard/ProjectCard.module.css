@@ -1,0 +1,76 @@
+.card {
+  cursor: pointer;
+  margin: 5vh 0;
+  padding: 2rem;
+  color: var(--color-background);
+  --x: 50%;
+  --y: 50%;
+  position: relative;
+  transform: perspective(1000px) rotateX(calc((var(--y) - 150) / 25deg))
+    rotateY(calc((var(--x) - 150) / -25deg));
+  transform-style: preserve-3d;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.1s ease;
+  cursor: pointer;
+  border: 1px solid var(--color-border-glass);
+  border-radius: 1rem;
+  background: var(--color-bg-glass);
+  overflow: hidden;
+}
+
+.card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  transition: background 0.2s ease;
+  background: radial-gradient(
+    300px circle at var(--x) var(--y),
+    var(--color-border-glass),
+    transparent 40%
+  );
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  content: '';
+}
+.card:hover::before {
+  opacity: 1;
+}
+.cardInner {
+  position: relative;
+  z-index: 3;
+  color: var(--color-background);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+.summary {
+  margin-bottom: 1rem;
+}
+.stack li {
+  display: inline-block;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  margin: 0.25rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border-glass);
+  border-radius: 0.75rem;
+  background: var(--color-bg-glass);
+  padding: 0.4rem 0.9rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.stack li:hover {
+  transform: translateY(-1px);
+}
